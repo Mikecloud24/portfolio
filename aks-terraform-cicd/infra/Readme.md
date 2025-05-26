@@ -15,6 +15,12 @@ The complete demo code CICD end-to-end Terraform automation workflow is in my pr
 10. etc
 
 
+![image](https://github.com/user-attachments/assets/04cc2373-dc49-4676-806c-665696787fa0)
+
+
+![image](https://github.com/user-attachments/assets/ac3cc0ed-940b-494f-baa3-ac8391becb2e)
+
+
 
 You can use the following Terraform command to destroy the infra provision via this code, first run
 
