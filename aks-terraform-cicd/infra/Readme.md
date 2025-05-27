@@ -1,7 +1,7 @@
-Infra demo using Terraform to provision ACR, AKS and aks role assignment
+# Infra demo using Terraform to provision ACR, AKS and aks role assignment
 
 
-The complete demo code CICD end-to-end Terraform automation workflow is in my private repo.  The project involves:
+# The complete demo code CICD end-to-end Terraform automation workflow is in my private repo.  The project involves:
 
 1. create Azure Resources [AKS, ACR, Storage, Networking, Azure key Vault...]
 2. configure ABAC
@@ -15,14 +15,14 @@ The complete demo code CICD end-to-end Terraform automation workflow is in my pr
 10. etc
 
 
-![image](https://github.com/user-attachments/assets/04cc2373-dc49-4676-806c-665696787fa0)
+# ![image](https://github.com/user-attachments/assets/04cc2373-dc49-4676-806c-665696787fa0)
 
 
-![image](https://github.com/user-attachments/assets/ac3cc0ed-940b-494f-baa3-ac8391becb2e)
+# ![image](https://github.com/user-attachments/assets/ac3cc0ed-940b-494f-baa3-ac8391becb2e)
 
 
 
-You can use the following Terraform command to destroy the infra provision via this code, first run
+# You can use the following Terraform command to destroy the infra provision via this code, first run
 
 1. <terraform plan -destroy -out main.destroy.tfplan>   (This is important if you used -out flag to save your plan before you provision the infra, otherwise use terraform destroy)
 
