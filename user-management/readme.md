@@ -1,4 +1,4 @@
-# User management using Linus command, how to use this script
+# User management using Linux command, how to use this script
 
 # Comprehensive shell script for user management in Ubuntu. It allows you to create, delete, list, and manage users with proper checks. 
 
