@@ -1,0 +1,56 @@
+---
+# Create a PersistentVolume ( pv-storageclaim.yml)
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: demo-pv-volume
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data"
+---
+# Create a PersistentVolumeClaim
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: demo-pv-claim
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+---
+# Create a Pod and mount the PersistentVolumeClaim
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-pv-pod
+spec:
+  volumes:
+    - name: demo-pv-storage
+      persistentVolumeClaim:
+        claimName: demo-pv-claim
+  containers:
+    - name: demo-pv-container
+      image: nginx
+      resources:
+        requests:
+          memory: "128Mi"
+          cpu: "250m"
+        limits:
+          memory: "256Mi"
+          cpu: "500m"
+      ports:
+        - containerPort: 80
+          name: "http-server"
+      volumeMounts:
+        - mountPath: "/data"
+          name: demo-pv-storage
+---
+
