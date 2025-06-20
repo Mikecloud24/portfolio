@@ -53,4 +53,3 @@ spec:
         - mountPath: "/data"
           name: demo-pv-storage
 ---
-
