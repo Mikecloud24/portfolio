@@ -4,14 +4,23 @@
 # The complete demo code CICD end-to-end Terraform automation workflow is in my private repo.  The project involves:
 
 1. create Azure Resources [AKS, ACR, Storage, Networking, Azure key Vault...]
-2. configure ABAC
+  
+2. configure RBAC
+  
 3. Deploy a .NET App to AKS
+   
 4. Integrate Terraform into Azure DevOps
+  
 5. A custom shell script that performs kubernetes health check (nodes and pods) CPU, Memory and disk. This is integrated as a post-deployment step via kubernetes manifest using Bash task.
+    
 6.  Before the Dockerized app is deployed to AKS cluster, SonarQube is integrated for code quality analysis
+   
 7. deployment manifest file
+   
 8. service file
+   
 9. Dockerfile
+    
 10. etc
 
 
